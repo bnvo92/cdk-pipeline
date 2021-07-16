@@ -112,7 +112,7 @@ export class ApplicationStack extends Stack {
 
     // create lambda
     const createLambdaFunction = new lambdaFuncConstruct(this, 'CreateLambda', {
-      functionEntry: './lib/lambda-handler-pyt',
+      functionEntry: './lib/application/lambda-func',
       index: 'dynamodb_create',
       lambdaEnvConfigs: myLambdaEnvConfigs,
       integrationOptions: IntegrationOps
@@ -124,7 +124,7 @@ export class ApplicationStack extends Stack {
     
     // list
     const listLambdaFunction = new lambdaFuncConstruct(this, 'ListLambda', {
-      functionEntry: './lib/lambda-handler-pyt',
+      functionEntry: './lib/application/lambda-func',
       index: 'dynamodb_list',
       lambdaEnvConfigs: myLambdaEnvConfigs,
       integrationOptions: IntegrationOps
@@ -135,7 +135,7 @@ export class ApplicationStack extends Stack {
 
     // get item
     const getLambdaFunction = new lambdaFuncConstruct(this, 'GetLambda', {
-      functionEntry: './lib/lambda-handler-pyt',
+      functionEntry: './lib/application/lambda-func',
       index: 'dynamodb_get',
       lambdaEnvConfigs: myLambdaEnvConfigs,
       integrationOptions: IntegrationOps
@@ -148,7 +148,7 @@ export class ApplicationStack extends Stack {
 
     // delete
     const deleteLambdaFunction = new lambdaFuncConstruct(this, 'DeleteLambda', {
-      functionEntry: './lib/lambda-handler-pyt',
+      functionEntry: './lib/application/lambda-func',
       index: 'dynamodb_delete',
       lambdaEnvConfigs: myLambdaEnvConfigs,
       integrationOptions: IntegrationOps
@@ -159,7 +159,7 @@ export class ApplicationStack extends Stack {
 
     // update
     const updateLambdaFunction = new lambdaFuncConstruct(this, 'UpdateLambda', {
-      functionEntry: './lib/lambda-handler-pyt',
+      functionEntry: './lib/application/lambda-func',
       index: 'dynamodb_update',
       lambdaEnvConfigs: myLambdaEnvConfigs,
       integrationOptions: IntegrationOps

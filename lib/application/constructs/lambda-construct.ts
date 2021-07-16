@@ -49,7 +49,7 @@ interface mylambdaProps extends StackProps {
         runtime: Runtime.PYTHON_3_8,
         index: 'handler.py',
         handler: props.index,
-        entry: './lib/lambda-handler-pyt',
+        entry: props.functionEntry,
         environment : props.lambdaEnvConfigs,
         role: lambda_role,
         timeout: Duration.seconds(30)
